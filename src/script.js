@@ -9,7 +9,7 @@ import gsap from 'gsap'
 const gui = new dat.GUI()
 
 const parameters = {
-    materialColor: '#fd0096'
+    materialColor: '##ffffff'
 }
 
 gui
@@ -52,23 +52,23 @@ const material2 = new THREE.MeshBasicMaterial({
 const objectsDistance = 4
 const mesh1 = new THREE.Mesh(
     new THREE.TorusGeometry(1, 0.3, 16, 60),
-    material
+    material2
 )
 const mesh2 = new THREE.Mesh(
     new THREE.IcosahedronGeometry(1, 0),
-    material
+    material2
 )
 const mesh3 = new THREE.Mesh(
     new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
-    material
+    material2
 )
 const mesh4 = new THREE.Mesh(
     new THREE.TorusGeometry(1, 0.3, 16, 60),
-    material
+    material2
 )
 const mesh5 = new THREE.Mesh(
     new THREE.ConeGeometry(1, 2, 32),
-    material
+    material2
 )
 const mesh6 = new THREE.Mesh(
     new THREE.RingGeometry( 0.5, 2, 3 ),
