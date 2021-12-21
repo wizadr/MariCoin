@@ -38,15 +38,12 @@ const gradientTexture = textureLoader.load('textures/gradients/4.jpg')
 gradientTexture.magFilter = THREE.NearestFilter
 
 // Material
-const material = new THREE.MeshToonMaterial({
-    color: parameters.materialColor,
-    gradientMap: gradientTexture
+const material = new THREE.MeshNormalMaterial({
+    color: 0xffff00,
+    gradientMap: gradientTexture,
+    side: THREE.DoubleSide
 })
 
-const material2 = new THREE.MeshBasicMaterial({
-    color: 0xffff00,
-    side: THREE.DoubleSide 
-})
 
 // Objects
 const objectsDistance = 4
@@ -56,23 +53,23 @@ const mesh1 = new THREE.Mesh(
 )
 const mesh2 = new THREE.Mesh(
     new THREE.IcosahedronGeometry(1, 0),
-    material2
+    material
 )
 const mesh3 = new THREE.Mesh(
     new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
-    material2
+    material
 )
 const mesh4 = new THREE.Mesh(
     new THREE.TorusGeometry(1, 0.3, 16, 60),
-    material2
+    material
 )
 const mesh5 = new THREE.Mesh(
     new THREE.ConeGeometry(1, 2, 32),
-    material2
+    material
 )
 const mesh6 = new THREE.Mesh(
-    new THREE.RingGeometry( 0.5, 2, 3 ),
-    material2
+    new THREE.OctahedronGeometry(1, 0), 
+    material
 )
 
 mesh1.position.x = 2
@@ -123,7 +120,9 @@ particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
     color: parameters.materialColor,
-    sizeAttenuation: textureLoader,
+    sizeAttenuation: true,
+    transparent: true,
+    alphaTest: 0.5,
     size: 0.05
 })
 
@@ -164,7 +163,7 @@ const cameraGroup = new THREE.Group()
 scene.add(cameraGroup)
 
 // Base camera
-const camera = new THREE.PerspectiveCamera(50, sizes.width / sizes.height, 0.9, 100)
+const camera = new THREE.PerspectiveCamera(36, sizes.width / sizes.height, 1, 100)
 camera.position.z = 6
 cameraGroup.add(camera)
 
