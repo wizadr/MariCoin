@@ -123,7 +123,7 @@ const particlesMaterial = new THREE.PointsMaterial({
     sizeAttenuation: true,
     transparent: true,
     alphaTest: 0.5,
-    size: 0.05
+    size: 0.05  
 })
 
 // Points

@@ -76,7 +76,7 @@ nav
   li {
     position: relative;
     transition: all 0.3s ease-out;
-    margin-bottom: 01em;
+    margin-bottom: 0.01em;
     }
     &:after {
       content: '';
@@ -98,7 +98,7 @@ nav
       }
       &:hover {
         background-color: rgba(185, 23, 204, 0.1);
-        padding-left: 1em
+        padding-left: 10em
       }
       &:focus {
         background-color: rgba(185, 23, 204, 0.1);
