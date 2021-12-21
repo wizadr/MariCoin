@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-html
+html, body
 {
     background: #2E113F;
 }
@@ -18,52 +18,43 @@ html
 }
 
 .wrapper {
-  min-height: 100vh;
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
-  color: #fff;
+  min-height: 50vh;
+  font-family: 'Space Grotesk', serif;
+  font-weight: 600;
+  color: rgba(185, 23, 204, 1);
   position: relative; 
 }
 
 section {
   height: 100vh;
-  font-size: 6vmin;
-  color: #ffeded;
-  position: relative;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  padding: 5%;
+  font-size: 100px;
+  font-weight: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-section:nth-child(odd)
-{
-    justify-content: flex-end;
-}
-
-.nav {
+nav 
   &__wrapper {
     position: fixed;
-    height: 100%;
-    padding: 30px;
-
+    height: 100vh;
+    padding: 10px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
+    z-index: 100000;
   }
 
   & {
-    margin: 0 0 100px 30px; 
+    margin: 0 0 10px 10px; 
   }
   &__counter {
-    font-size: 24px;
-    transition: all 0.15s ease-out;
+    font-size: 148px;
+    transition: all 0.85s ease-out;
   }
   &__title {
-    font-size: 32px;
-    font-weight: 300;
+    font-size: 160px;
+    font-weight: 600;
     margin: 0 0 0.25em;
     width: 300px;
     height: 0;
@@ -73,7 +64,7 @@ section:nth-child(odd)
   }
   &__body {
     font-weight: 100;
-    font-size: 18px;
+    font-size: 32px;
     font-size: 18px;
     width: 300px;
     height: 0;
@@ -85,8 +76,8 @@ section:nth-child(odd)
   li {
     position: relative;
     transition: all 0.3s ease-out;
-    margin-bottom: 1em;
-
+    margin-bottom: 01em;
+    }
     &:after {
       content: '';
       display: block;
@@ -101,23 +92,21 @@ section:nth-child(odd)
 
     a {
       display: block;
-      padding: 0;
-      color: #fff;
+      padding: 5px 0;
+      color: #B917CC;
       transition: all 0.15s ease-out;
-
+      }
       &:hover {
-        background-color: transparent;
+        background-color: rgba(185, 23, 204, 0.1);
         padding-left: 1em
       }
       &:focus {
-        background-color: transparent;
-      }
+        background-color: rgba(185, 23, 204, 0.1);
     }
-
     &.active {
       pointer-events: none;
       padding-left: 1em;
-
+      }
       &:after {
         width: 35px;
         height: 400px;
@@ -125,10 +114,14 @@ section:nth-child(odd)
       }
 
       .nav__counter {
-        font-size: 48px;
+        font-size: 100px;
+        font-weight: 600;
+        color: whitesmoke;
+
       }
       .nav__title {
-        height: 40px;
+        font-size: 80px;
+        font-weight: 600;
         opacity: 1;
         overflow: visible;
       }
@@ -137,8 +130,7 @@ section:nth-child(odd)
         opacity: 1;
         overflow: visible;
       }
-    }
+      
 
-  }
 
-}
+

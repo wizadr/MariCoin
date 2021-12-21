@@ -9,7 +9,7 @@ import gsap from 'gsap'
 const gui = new dat.GUI()
 
 const parameters = {
-    materialColor: '##ffffff'
+    materialColor: '#FFC700'
 }
 
 gui
@@ -52,7 +52,7 @@ const material2 = new THREE.MeshBasicMaterial({
 const objectsDistance = 4
 const mesh1 = new THREE.Mesh(
     new THREE.TorusGeometry(1, 0.3, 16, 60),
-    material2
+    material
 )
 const mesh2 = new THREE.Mesh(
     new THREE.IcosahedronGeometry(1, 0),
@@ -96,7 +96,7 @@ const sectionMeshes = [ mesh1, mesh2, mesh3, mesh4, mesh5, mesh6 ]
 /**
  * Lights
  */
-const directionalLight = new THREE.DirectionalLight('#fd0045', 1)
+const directionalLight = new THREE.DirectionalLight('FFC700', 1)
 directionalLight.position.set(1, 1, 0)
 scene.add(directionalLight)
 
@@ -154,6 +154,8 @@ window.addEventListener('resize', () =>
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
 
+// SMOOTH SCROLLING SECTIONS
+
 /**
  * Camera
  */
@@ -162,7 +164,7 @@ const cameraGroup = new THREE.Group()
 scene.add(cameraGroup)
 
 // Base camera
-const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(50, sizes.width / sizes.height, 0.9, 100)
 camera.position.z = 6
 cameraGroup.add(camera)
 
@@ -196,9 +198,9 @@ window.addEventListener('scroll', () =>
             {
                 duration: 1.5,
                 ease: 'power2.inOut',
-                x: '+=6',
+                x: '+=5',
                 y: '+=3',
-                z: '+=1.5'
+                z: '+=8.5'
             }
         )
     }
