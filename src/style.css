@@ -15,23 +15,26 @@ html, body
     top: 0;
     left: 0;
     outline: none;
+    z-index: 300;
 }
 
 .wrapper {
-  min-height: 50vh;
-  font-family: 'Space Grotesk', serif;
-  font-weight: 600;
-  color: rgba(185, 23, 204, 1);
+  min-height: 100vh;
+  color: white;
   position: relative; 
+  z-index: 200;
+  padding: 5%;
 }
 
 section {
   height: 100vh;
+  font-family: 'Space Grotesk', serif;
   font-size: 100px;
-  font-weight: 300px;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10 20;
 }
 
 nav 
@@ -42,7 +45,7 @@ nav
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
-    z-index: 100000;
+    z-index: 100;
   }
 
   & {

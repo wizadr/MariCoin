@@ -118,12 +118,12 @@ const particlesGeometry = new THREE.BufferGeometry()
 particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
 
 // Material
-const particlesMaterial = new THREE.PointsMaterial({
-    color: parameters.materialColor,
-    sizeAttenuation: true,
-    transparent: true,
-    alphaTest: 0.5,
-    size: 0.05  
+const particlesMaterial = new THREE.PointsMaterial ({
+color: parameters.materialColor,
+sizeAttenuation: true,
+transparent: true,
+alphaTest: 0.5,
+size: 0.05  
 })
 
 // Points
@@ -172,6 +172,7 @@ cameraGroup.add(camera)
  */
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
+    transparent: true,
     alpha: true
 })
 renderer.setSize(sizes.width, sizes.height)
