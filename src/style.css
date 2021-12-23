@@ -5,6 +5,12 @@
 }
 
 body {
+  background-image: url("https://i.ibb.co/T4cT0sW/Frame-48095469.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
   font-size: 1.4rem;
 } /* =14px */
 h1 {
@@ -28,13 +34,12 @@ html {
 }
 
 .landing-page-container {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   height: 90rem;
-  background-image: url("https://i.ibb.co/T4cT0sW/Frame-48095469.png");
   background-repeat: repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: ;
   overflow: hidden;
   font-family: "Space Grotesk", sans-serif;
   font-weight:  700;
@@ -100,7 +105,8 @@ html {
   line-height: 1.7rem;
   text-align: center;
 }
-.button {
+a.button {
+  text-decoration: none;
   flex: 1 1 auto;
   margin: 10px;
   padding: 20px;
@@ -138,11 +144,11 @@ html {
   border-radius: 50%;
   margin: 0 auto;
   position: relative;
-  top: 10.5rem;
+  top: 55rem;
   }
   .greeting {
     position: absolute;
-    top: 11.6rem;
+    top: 20rem;
     left: 13rem;
     right: 0;
     margin: 0 auto;
