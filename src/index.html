@@ -5,116 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;600&display=swap" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
-    <title>MariCoin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <title>mariCoin</title>
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
-    <canvas class="webgl"></canvas>
 
+  <canvas class="webgl"></canvas>
 
-    <div class="wrapper">
+     <div class="wrapper">
+       <div class="container">
+          <div class="container__item landing-page-container">
+             <div class="content__wrapper">
+                <header class="header">
+                    <div class="menu-icon header__item">
+                        <span class="menu-icon__line"></span>
+                    </div>
 
-        <section class="section section1" id="section1">Soy Maricoin</section>
+                  <h1 class="heading header__item">mariCoin</h1>
 
-        <nav class="nav__wrapper" id="navbar-example">
-          <ul class="nav">
+                </header>
 
-            <li role="presentation" class="active">
-              <a href="#section1">
-                <span class="nav__counter">.01</span>
-                <h3 class="nav__title">Intro</h3>
-                <p class="nav__body"><strong>Timeline-style navigation</strong>. Scroll down to see what happens, or click on a number in the nav.</p>
-                <hr class="solid">
-              </a>
-            </li>
+                  <p class="coords">N 49° 16' 35.173"  /  W 0° 42' 11.30"</p>
 
-            <li role="presentation">
-              <a href="#section2">
-                <span class="nav__counter">.02</span>
-                <h3 class="nav__title">Section 2 Title</h3>
-                <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit amet condimentum lacus.</p>
-                <hr class="solid">
-              </a>
-            </li>
+                  <div class="ellipses-container">
 
-            <li role="presentation">
-              <a href="#section3">
-                <span class="nav__counter">.03</span>
-                <h3 class="nav__title">Section 3 Title</h3>
-                <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit amet condimentum lacus.</p>
-                <hr class="solid">
-              </a>
-            </li>
+                      <h2 class="greeting">Hello</h2>
 
-            <li role="presentation">
-              <a href="#section4">
-                <span class="nav__counter">.04</span>
-                <h3 class="nav__title">Section 4 Title</h3>
-                <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit amet condimentum lacus.</p>
-                <hr class="solid">
-              </a>
-            </li>
+                      <div class="ellipses ellipses__outer--thin">
 
-            <li role="presentation">
-              <a href="#section5">
-                <span class="nav__counter">.05</span>
-                <h3 class="nav__title">Section 5 Title</h3>
-                <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit amet condimentum lacus.</p>
-                <hr class="solid">
-              </a>
-            </li>
+                          <div class="ellipses ellipses__orbit"></div>
 
-            <li role="presentation">
-              <a href="#section6">
-                <span class="nav__counter">.06</span>
-                <h3 class="nav__title">Section 6 Title</h3>
-                <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit amet condimentum lacus.</p>
-                <hr class="solid">
-              </a>
-            </li>
+                      </div>
 
-          </ul>
-        </nav>
+                      <div class="ellipses ellipses__outer--thick"></div>
+                      <div class="button">Rounded Corners</div>
+                  </div>
 
+                  <div class="scroller">
+                      <p class="page-title">home</p>
 
-        <section class="section section2" id="section2">Section 2</section>
+                      <div class="timeline">
+                          <span class="timeline__unit"></span>
+                          <span class="timeline__unit timeline__unit--active"></span>
+                          <span class="timeline__unit"></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+           
 
-        <section class="section section3" id="section3">Section 3</section>
-
-        <section class="section section4" id="section4">Section 4</section>
-
-        <section class="section section5" id="section5">Section 5</section>
-
-        <section class="section section6" id="section6">Section 6</section>
-
-
-  
-          <!--<section class="section1"><h1>MariCoin</h1></section> 
-        <section class="section2"><h2>Roadmap</h2></section>
-        <section class="section3"><h2>Manifesto</h2></section>
-        <section class="section4"><h1>Blog</h1></section>
-        <section class="section5"><h2>Team</h2></section>
-        <section class="section6"><h2>Contact</h2></section> -->
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-        || location.hostname == this.hostname) {
-
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-           if (target.length) {
-             $('html,body').animate({
-                 scrollTop: target.offset().top
-            }, 1000);
-            return false;
         }
     }
 });
