@@ -13,9 +13,12 @@ body {
   background: radial-gradient(#292929, #000000);
   overflow: hidden;
 }
+.container-frame {
+
+}
  
 h1 {
-font-family: Space Grotesk;
+font: normal small-caps normal 40px/auto Space Grotesk;
 font-stretch: semi-expanded;
 font-style: inherit;
 font-weight: 700;
