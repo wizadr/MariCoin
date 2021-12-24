@@ -31,8 +31,10 @@ line-height: 104px;
 
 navbar {
   width: 90vw;
-  max-height: 2vh;
-  padding: 2rem 2rem;
+  max-height: 4vh;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
   align-items: center;
   text-align: left;
@@ -46,24 +48,21 @@ navbar {
  color: #FFFFFF;
 }
 a.button {
+  flex: auto 1;
   font-family: 'Space Grotesk', sans-serif;
-  font-style: light;
-  font-weight: 300;
+  font-weight: light 300;
   font-size: 24px;
   text-decoration: none;
-  margin: 10px 150px;
+  margin: 0 8px 0 104px;
   padding: 20px;
   border: 0.5px solid #f7f7f7;
   border-radius: 64px;
-  text-align: center;
   position: relative;
   overflow:hidden;
   background-color: #14A38B;
   transition: 2s;
   }
 a.button:hover {
-  flex: 1 1 auto;
-  text-transform: uppercase;
   border: 0.5px dotted #f7f7f7;
   animation: ease-in-out;
 }
@@ -129,7 +128,7 @@ a.button:hover {
   width: 2.5rem;
   height: 2.5rem;
   border-width: 2px;
-  border-color: $tiber;
+  border-color: white;
   top: 5rem;
   right: 6.75rem;
   }
