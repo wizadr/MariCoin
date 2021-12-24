@@ -14,17 +14,19 @@
         <h1 class="nav__item">mariCoin</h1>
         <a href="https://bit.ly/maricoin" class="nav__item button">Únete a la lista de espera</a>
     </navbar>
-
-    <p class="coords">N 49° 16' 35.173"  /  W 0° 42' 11.30"</p>
-
-    <div class="ellipses-container">
-        <h2 class="greeting">Hello</h2>
+    <section>
+      <!--<p class="coords">N 49° 16' 35.173"  /  W 0° 42' 11.30"</p>-->
+      <div class="ellipses-container">
         <div class="ellipses ellipses__outer--thin">
            <div class="ellipses ellipses__orbit"></div>
         </div>
-        <div class="ellipses ellipses__outer--thick"></div>
+        <div class="ellipses ellipses__outer--thick">
+          <h2 class="count">Countdown</h2>
+          <div class="ellipses ellipses__orbit2"></div>
+        </div>
+    </section>
 
-           
+          
   <script type="module">
    import * as THREE from './build/three.module.js';
    import { OrbitControls } from './js/OrbitControls.js';

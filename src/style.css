@@ -8,7 +8,8 @@
 body {
   width: 100vw;
   height: 100vh;
-  margin: 4%;
+  margin: 1%;
+  padding: 1%;
   background: radial-gradient(#292929, #000000);
   overflow: hidden;
 }
@@ -18,8 +19,8 @@ font-family: Space Grotesk;
 font-style: normal;
 font-weight: 700;
 font-size: 80px;
-letter-spacing: -0.08em;
-line-height: 104px;
+letter-spacing: -0.04em;
+line-height: auto;
 /* identical to box height */
 }
 /*.webgl {
@@ -42,6 +43,9 @@ navbar {
   vertical-align: center;
   border: 0.5px solid #f7f7f7;
   border-radius: 212px;
+}
+section {
+
 }
 .nav__item {
  text-align: center;
@@ -66,7 +70,7 @@ a.button:hover {
   border: 0.5px dotted #f7f7f7;
   animation: ease-in-out;
 }
-.coords {
+/*.coords {
   font-size: 2rem;
   display: block;
   transform: rotate(-90deg);
@@ -75,7 +79,7 @@ a.button:hover {
   letter-spacing: 0.1rem;
   left: 0%;
   margin: 0;
-}
+}*/
 .ellipses-container {
   width: 50rem;
   height: 50rem;
@@ -85,18 +89,17 @@ a.button:hover {
   top: 5rem;
   }
 
-.greeting {
+.count {
   position: relative;
-  top: 22rem;
-  left: 20rem;
-  right: 0;
-    margin: 0 auto;
-    font-family: 'Space Grotesk', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 4rem;
-    font-size: 4rem;
-    font-weight: 400;
-    opacity: 0.5;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.02rem;
+  font-size: 4rem;
+  font-weight: 400;
+  opacity: 0.5;
 }
 .ellipses {
   border-radius: 100%;
@@ -131,22 +134,20 @@ a.button:hover {
   border-color: white;
   top: 5rem;
   right: 6.75rem;
-  }
-  &:before {
-    content: "";
+}
+.ellipses__orbit2 {
+    content: "*";
     width: 0.7rem;
     height: 0.7rem;
     border-radius: 50%;
     display: inline-block;
-    background-color: $tiber;
+    background-color: white;
     margin: 0 auto;
     left: 0;
     right: 0;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
   }
-
 @keyframes ellipsesRotate {
   0% {
     transform: rotate(-45deg);
