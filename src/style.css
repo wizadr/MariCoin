@@ -6,22 +6,28 @@
 }
 
 body {
+  font: normal small-caps normal 16px/1.4 Space Grotesk;
   width: 100vw;
   height: 100vh;
-  margin: 1%;
-  padding: 1%;
+  margin: 2%;
   background: radial-gradient(#292929, #000000);
   overflow: hidden;
 }
  
 h1 {
 font-family: Space Grotesk;
-font-style: normal;
+font-stretch: semi-expanded;
+font-style: inherit;
 font-weight: 700;
 font-size: 80px;
 letter-spacing: -0.04em;
-line-height: auto;
+line-height: 80px;
 /* identical to box height */
+}
+h1#title {
+  top: 50%;
+  z-index: 100;
+  font-variant: all-small-caps;
 }
 /*.webgl {
     position: fixed;
@@ -31,9 +37,12 @@ line-height: auto;
 }*/
 
 navbar {
-  width: 90vw;
+  display: inline-flex;
+  flex-direction: row;
+  width: 98vw;
   max-height: 4vh;
   padding-left: 2rem;
+  padding-right: 0.08rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
@@ -43,6 +52,7 @@ navbar {
   vertical-align: center;
   border: 0.5px solid #f7f7f7;
   border-radius: 212px;
+  overflow: hidden;
 }
 section {
 
@@ -52,12 +62,12 @@ section {
  color: #FFFFFF;
 }
 a.button {
-  flex: auto 1;
+  flex: auto;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: light 300;
   font-size: 24px;
   text-decoration: none;
-  margin: 0 8px 0 104px;
+  margin: 0 8px 0 8px;
   padding: 20px;
   border: 0.5px solid #f7f7f7;
   border-radius: 64px;
@@ -67,7 +77,7 @@ a.button {
   transition: 2s;
   }
 a.button:hover {
-  border: 0.5px dotted #f7f7f7;
+  border: 1px dotted #f7f7f7;
   animation: ease-in-out;
 }
 /*.coords {
@@ -98,7 +108,7 @@ a.button:hover {
   text-transform: uppercase;
   letter-spacing: -0.02rem;
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: light 300;
   opacity: 0.5;
 }
 .ellipses {
@@ -126,7 +136,6 @@ a.button:hover {
   transform: rotate(-45deg);
   animation: ellipsesRotate 15s ease-in-out infinite;
 }
-
 .ellipses__orbit {
   width: 2.5rem;
   height: 2.5rem;
@@ -136,25 +145,21 @@ a.button:hover {
   right: 6.75rem;
 }
 .ellipses__orbit2 {
-    content: "*";
-    width: 0.7rem;
-    height: 0.7rem;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: white;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    position: absolute;
-    top: 50%;
-  }
+ content: "🪙";
+ display: block;
+ margin: 0 auto;
+ left: 0;
+ right: 0;
+ position: absolute;
+ top: 50%;
+}
+/*ANIMATIONS*/
 @keyframes ellipsesRotate {
   0% {
-    transform: rotate(-45deg);
+    transform: rotate(0);
   }
-
   100% {
-    transform: rotate(-405deg);
+    transform: rotate(-360deg);
   }
 }
 
