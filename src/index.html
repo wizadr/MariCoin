@@ -10,57 +10,32 @@
 </head>
 
 <body>
+    <navbar class="nav">
+        <h1 class="nav__item">mariCoin</h1>
+        <a href="https://bit.ly/maricoin" class="nav__item button">Únete a la lista de espera</a>
+    </navbar>
 
-  <canvas class="webgl"></canvas>
+    <p class="coords">N 49° 16' 35.173"  /  W 0° 42' 11.30"</p>
 
-     <div class="wrapper">
-       <div class="container">
-          <div class="container__item landing-page-container">
-             <div class="content__wrapper">
-                <header class="header">
-                    <div class="menu-icon header__item">
-                        <span class="menu-icon__line"></span>
-                    </div>
+    <div class="ellipses-container">
+        <h2 class="greeting">Hello</h2>
+        <div class="ellipses ellipses__outer--thin">
+           <div class="ellipses ellipses__orbit"></div>
+        </div>
+        <div class="ellipses ellipses__outer--thick"></div>
 
-                  <h1 class="heading header__item">mariCoin</h1>
-                  <a href="https://bit.ly/maricoin" class="button">Únete a la waiting list!</a>
-
-                </header>
-
-                  <p class="coords">N 49° 16' 35.173"  /  W 0° 42' 11.30"</p>
-
-                  <div class="ellipses-container">
-
-                      <h2 class="greeting">Hello</h2>
-
-                      <div class="ellipses ellipses__outer--thin">
-
-                          <div class="ellipses ellipses__orbit"></div>
-
-                      </div>
-
-                      <div class="ellipses ellipses__outer--thick"></div>
-
-                  <div class="scroller">
-                      <p class="page-title"></p>
-
-                      <div class="timeline">
-                          <span class="timeline__unit"></span>
-                          <span class="timeline__unit timeline__unit--active"></span>
-                          <span class="timeline__unit"></span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
            
-
+  <script type="module">
+   import * as THREE from './build/three.module.js';
+   import { OrbitControls } from './js/OrbitControls.js';
+   import { FlakesTexture } from './js/FlakesTexture.js';
+   import { RGBELoader } from './js/RGBELoader.js';
+...
+      </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        }
-    }
-});
+
     </script>
 </body>
 </html>
