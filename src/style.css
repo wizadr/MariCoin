@@ -11,28 +11,22 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(#292929, #000000);
-  overflow: hidden;
+  background: #FFFFFF;
+
 }
-/*.webgl {
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
-}*/
+/*==============================>> NAVBAR */
 .navbar {
     display: flex;
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
+    background-color: #FFFFFF;
 }
 
-.brand-title {
+/* .brand-title {
     font-size: 1.5rem;
     margin: .5rem;
-}
+} */
 
 .navbar-links {
     height: 100%;
@@ -50,8 +44,10 @@ body {
 
 .navbar-links li a {
     display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
     text-decoration: none;
-    color: white;
+    color: #000000;
     padding: 1rem;
 }
 
@@ -76,6 +72,44 @@ body {
     background-color: white;
     border-radius: 10px;
 }
+/*==============================>> MARQUEE */
+.marquee {
+    position: relative;
+    overflow: hidden;
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+}
+
+.marquee__inner {
+    width: fit-content;
+    display: flex-inline;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+    animation-play-state: paused;
+}
+
+.marquee span {
+    font-size: 4vw;
+    padding: 0 2vw;
+}
+
+.marquee:hover .marquee__inner {
+    animation-play-state: running;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
+/*==============================>>  */
+/*==============================>> MEDIA_QUERIES */
 
 @media (max-width: 800px) {
     .navbar {
@@ -134,10 +168,7 @@ body {
   max.height: 25vh;
   overflow: hidden;
 }
-nav {
-  top: 0;
-  padding: 1.5rem 2rem;
-}
++
 section {
   display:flex;
   flex-flow: row nowrap;
@@ -147,13 +178,13 @@ footer {
   flex-flow: row nowrap;
 }
 
-h1 {
+h3 {
 font-family: 'Space Grotesk', sans-serif;
 font-size: 60px;
 font-weight: 700;
 letter-spacing: -0.01em;
 line-height: 60px;
-color: #FFFFFF;
+color: #000000;
 }
 .row {
 display: flex;
