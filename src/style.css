@@ -76,14 +76,14 @@ body {
 .marquee {
     position: relative;
     overflow: hidden;
-    --offset: 20vw;
+    --offset: 1vw;
     --move-initial: calc(-25% + var(--offset));
     --move-final: calc(-50% + var(--offset));
 }
 
 .marquee__inner {
-    width: fit-content;
-    display: flex-inline;
+    width: 100vw;
+    display-flex:  nowrap;
     position: relative;
     transform: translate3d(var(--move-initial), 0, 0);
     animation: marquee 5s linear infinite;
@@ -91,11 +91,13 @@ body {
 }
 
 .marquee span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
     font-size: 4vw;
     padding: 0 2vw;
 }
 
-.marquee:hover .marquee__inner {
+.marquee__inner {
     animation-play-state: running;
 }
 
