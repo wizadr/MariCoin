@@ -69,10 +69,10 @@ body {
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: white;
+    background-color: #f000000;
     border-radius: 10px;
 }
-/*==============================>> MARQUEE */
+/*==============================>> MARQUEEs */
 .marquee {
     position: relative;
     overflow: hidden;
@@ -86,7 +86,7 @@ body {
     display-flex:  nowrap;
     position: relative;
     transform: translate3d(var(--move-initial), 0, 0);
-    animation: marquee 5s linear infinite;
+    animation: marquee 10s linear infinite;
     animation-play-state: paused;
 }
 
@@ -110,6 +110,21 @@ body {
         transform: translate3d(var(--move-final), 0, 0);
     }
 }
+
+marquee-2 {
+    position: relative;
+    overflow: hidden;
+    --offset: 1vw;
+    --move-initial: calc(-0% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+}
+.marquee__inner {
+    width: 100vw;
+    display-flex:  nowrap;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 10s linear infinite;
+    animation-play-state: paused;
 /*==============================>>  */
 /*==============================>> MEDIA_QUERIES */
 
@@ -149,23 +164,24 @@ body {
 .main {
   display: flex;
   align-self: center;
-  margin: 2%;
-  /*border: 0.2px dotted #f7f7f7;*/
+  margin: 0.5%;
+  border: 4px dotted #000000;
   border-radius: 24px;  
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 .container-frame {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row-reverse wrap;
   width:  96vw;
   height: 96vh;
-  border: 2px dotted #f7f7f7;
+  border: 2px dotted #f000000;
+
   border-radius: 24px;
   overflow: hidden;
 } 
 .cont-section {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   width:  100vw;
   max.height: 25vh;
   overflow: hidden;
@@ -173,7 +189,7 @@ body {
 +
 section {
   display:flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
 }
 footer {
   display:flex;
@@ -201,7 +217,7 @@ overflow: hidden;
 .title {
 font-family: 'Exo 2', sans-serif;
 font-style: italic;
-font-weight: 367;
+font-weight: 500;
 text-wrap: true;
 font-size: 96px;
 letter-spacing: -0.01em;
@@ -209,10 +225,7 @@ line-height: 60px;
 color: #FFFFFF;
 text-align: left;
 top: 50%;
-z-index: 100;
-font-variant: all-small-caps;
 }
-
 a.button {
   flex: auto;
   font-family: 'Space Grotesk', sans-serif;
@@ -221,90 +234,16 @@ a.button {
   text-decoration: none;
   margin: 0 8px 0 8px;
   padding: 1rem;
-  border: 1px solid #f7f7f7;
+  border: 1px solid #000000;
   border-radius: 64px;
   position: relative;
   overflow:hidden;
   <animation: 2s;
   }
 a.button:hover {
-  background-color: #14A38B;
+  background-color: #000000;
   transition: ease-in-out;
 }
-/*.coords {
-  font-size: 2rem;
-  display: block;
-  transform: rotate(-90deg);
-  position: relative;
-  top: 14%;
-  letter-spacing: 0.1rem;
-  left: 0%;
-  margin: 0;
-}*/
-.ellipses-container {
-  width: 50rem;
-  height: 50rem;
-  border-radius: 100%;
-  margin: 0 auto;
-  position: relative;
-  top: 5rem;
-  }
-
-.count {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
-  font-family: 'Space Grotesk', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -0.02rem;
-  font-size: 4rem;
-  font-weight: light 300;
-  opacity: 0.5;
-}
-.ellipses {
-  border-radius: 100%;
-  position: absolute;
-  top: 0;
-  border-style: dotted;
-}
-
-.ellipses__outer--thin {
-    /* Glow Style */
-  filter: drop-shadow(0px 0px 4px rgba(70, 238, 106, 0.32)) drop-shadow(0px 0px 24px rgba(70, 238, 106, 0.6));
-  width: 100%;
-  height: 100%;
-  border-color: rgba(9, 56, 62, 0.9);
-  border-width: 10px;
-  transform: rotate(45deg);
-  animation: ellipsesOrbit 15s ease-in-out infinite;
-}
-.ellipses__outer--thick {
-  width: 100%;
-  height: 100%;
-  border-color: white;
-  border-width: 4px;
-  transform: rotate(-45deg);
-  animation: ellipsesRotate 15s ease-in-out infinite;
-}
-.ellipses__orbit {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-width: 2px;
-  border-color: white;
-  top: 5rem;
-  right: 6.75rem;
-}
-.ellipses__orbit2 {
- content: "🪙";
- display: block;
- margin: 0 auto;
- left: 0;
- right: 0;
- position: absolute;
- top: 50%;
-}
-
 /*ANIMATIONS*/
 @keyframes ellipsesRotate {
   0% {
