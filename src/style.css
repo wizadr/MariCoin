@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,500;0,900;1,367;1,800&family=Space+Grotesk:wght@300;400;700&display=swap');
-@import url("//hello.myfonts.net/count/3909a7");
 *
 {
   margin: 0;
@@ -12,9 +11,9 @@ html {
 body {
   width: 100vw;
   height: 100vh;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/northernlights.jpg);
+  height: 100vh;
   font-family: 'Space Grotesk', sans-serif;
-  background: rgba(255,255,255, 1);
-
 }
 a {
   text-decoration: none;
@@ -26,13 +25,9 @@ a {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
+    background-color: #00112C;
     padding:  1em;
 }
-/*
-.brand-title {  
-}*/
-
 .navbar-links {
     height: 100%;
 }
@@ -57,7 +52,7 @@ a {
 }
 
 .navbar-links li:hover {
-    background-color: #555;
+    background-color:#B1DE65;
 }
 
 .toggle-button {
@@ -74,37 +69,101 @@ a {
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: #f000000;
+    background-color: #ffffff;
     border-radius: 10px;
 }
 /*==============================>> MARQUEEs */
 .marquee {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 3rem;
-  height: 4vh;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  background-color: #e9e5fb;  
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  padding: 8px 0 4px 0; 
+   overflow: hidden;
+   background-color:hsla(0, 0%, 100%, 0.03);
+   box-shadow: inset 0px 0px 1.73844px rgba(255, 255, 255, 0.05), inset 0px 0.102261px 0.102261px rgba(255, 255, 255, 0.15);
+   backdrop-filter: blur(2.19862px);
 }
-/* even out the elements */
-.marquee div {
-  position: absolute;
-  width: 100%;
-  left: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
+
+.marquee--long {
+   margin: 2rem 0;
+   font-size: 6.25vw;
+   background-color:hsla(0, 0%, 100%, 0.03);
 }
-#container { 
-    width: 100%; 
-    height: 100%; 
-    position: relative; 
+.marquee--social { 
+   margin: 0;
+   font-size: 2.25vw;
+   background-color:hsla(0, 0%, 100%, 0.03);
+}
+.-fb { 
+   background-color:hsla(0, 0%, 100%, 0.03);
+}
+.marquee span{   
+    display: inline-block;
+    white-space: nowrap;
+    color: #00112C;
+    width: var(--tw);
+    text-shadow: var(--tw) 0 currentColor, 
+                 calc(var(--tw) * 2) 0 currentColor, 
+                 calc(var(--tw) * 3) 0 currentColor,
+                 calc(var(--tw) * 4) 0 currentColor,
+                 calc(var(--tw) * 5) 0 currentColor;
+   
+    will-change: transform;
+    animation: marquee var(--ad) linear infinite;
+    animation-play-state: running;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+/*  
+ * on MacOs: System Preferences > 
+ *           Accessibility > 
+ *           Display > Reduce motion
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee span {
+    animation: none;
+    text-shadow: none;
+    width: auto;
+    display: block;
+    line-height: 1.5;
+    text-align: center;
+    white-space: normal;
+  }
+}
+label { font: .85rem Courier; margin-left: .5em}
+
+.embed-container iframe, 
+.embed-container object {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  z-index: -1; 
 }
 /*==============================>>  */
+footer {
+  width: 100vw;
+}
+a.button {
+  flex: auto;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: light 300;
+  font-size: 32px;
+  text-decoration: none;
+  margin: 4rem 0;
+  padding: 1rem;
+  border: 4px solid #000000;
+  border-radius: 104px;
+  position: absolute;
+  overflow:hidden;
+  <animation: 2s;
+  }
+a.button:hover {
+  background-color: #000000;
+  transition: ease-in-out;
+}
+/*==============================>> ANIMATIONS */
 /*==============================>> MEDIA_QUERIES */
 
 @media (max-width: 800px) {
@@ -138,101 +197,6 @@ a {
     .navbar-links.active {
         display: flex;
     }
-}
-
-.main {
-  display: flex;
-  align-self: center;
-  margin: 1%;
-  border: 1px solid #000000;
-  border-radius: 0 0 48px 48px;  
-  overflow: hidden;
-}
-.container-frame {
-  display: flex;
-  flex-flow: row-reverse wrap;
-  width:  96vw;
-  height: 96vh;
-  border: 1px solid #f000000;
-  border-radius: 0 0 48px 48px;
-  overflow: hidden;
-} 
-.cont-section {
-  display: flex;
-  flex-flow: row wrap;
-  width:  100vw;
-  max.height: 25vh;
-  overflow: hidden;
-}
-+
-section {
-  display:flex;
-  flex-flow: row wrap;
-}
-footer {
-  display:flex;
-  flex-flow: row wrap;
-}
-.row {
-display: flex;
-flex-direction: row;
-max-height: auto;
-padding-top: 1rem;
-padding-bottom: 1rem;
-border-bottom: 0.5px solid #f7f7f7;
-overflow: hidden;
-}
-
-.title {
-font-family: 'Space Grotesk', sans-serif;
-font-style: italic;
-font-weight: 500;
-text-wrap: true;
-font-size: 3rem;
-letter-spacing: -0.01em;
-line-height: 60px;
-color: #FFFFFF;
-text-align: left;
-top: 50%;
-}
-a.button {
-  flex: auto;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: light 300;
-  font-size: 32px;
-  text-decoration: none;
-  margin: 0 8px 0 8px;
-  padding: 1rem;
-  border: 1px solid #000000;
-  border-radius: 64px;
-  position: relative;
-  overflow:hidden;
-  <animation: 2s;
-  }
-a.button:hover {
-  background-color: #000000;
-  transition: ease-in-out;
-}
-/*ANIMATIONS*/
-.marquee .marqueeone{
-  animation: marquee 10s linear infinite
-}
-
-.marquee .marqueetwo{
-  animation: marquee 10s linear 2.5s infinite 
-}
-
-.marquee .marqueethree{
-  animation: marquee 10s linear 5s infinite
-}
-
-.marquee .marqueefour{
-  animation: marquee 10s linear 7.5s infinite
-}
-@keyframes marquee {
-  0% { left: 100%; }
-  50% { left: -100%; }
-  100% {left: -100%}
 }
 
 
