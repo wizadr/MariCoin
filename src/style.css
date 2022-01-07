@@ -92,7 +92,7 @@ a {
     pointer-events: auto;
     cursor: pointer;
     background-color:#e7e7e7;
-    border: none;
+    border-radius: 104px;
     padding: 1.5rem 3rem;
     margin: 0;
     font-family: 'Space Grotesk', sans-serif;
