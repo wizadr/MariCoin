@@ -5,13 +5,12 @@
   padding: 0;
 }
 html {
-  overflow-y: scroll; 
   overflow-x:hidden;
 }
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #24408E;
+  background-color: hsla(0, 4%, 51%, 1);
   height: 100vh;
   font-family: 'Space Grotesk', sans-serif;
 }
@@ -23,34 +22,18 @@ footer {
   position: absolute;
 }
 a {
-  text-decoration: none;
-  color: #000;
-}
-a.button {
-  flex: auto;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: light 300;
-  font-size: 32px;
-  text-decoration: none;
-  margin: 4rem 0;
-  padding: 1rem;
-  border: 4px solid #000000;
-  border-radius: 104px;
-  position: absolute;
-  overflow:hidden;
-  <animation: 2s;
-  }
-a.button:hover {
-  background-color: #000000;
-  transition: ease-in-out;
+ font-family: 'Space Grotesk', sans-serif;
+ font-weight: 700;
+ text-decoration: none;
+ color: #000;
 }
 /*==============================>> NAVBAR */
 .navbar {
     display: flex;
-    position: relative;
+    position: sticky;
     justify-content: space-between;
     align-items: center;
-    background-color: #00112C;
+    background-color: hsla(0, 4%, 51%, 1);
     padding:  1em;
 }
 .navbar-links {
@@ -97,26 +80,127 @@ a.button:hover {
     background-color: #ffffff;
     border-radius: 10px;
 }
+/*==============================>> BUTTON CODROPS */
+
+.button {
+    pointer-events: auto;
+    cursor: pointer;
+    background-color:#e7e7e7;
+    border: none;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+.button::before,
+.button::after {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+}
+.button--helene {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+}
+
+.button--helene {
+    border-radius: 7px;
+    border: 4px solid hsla(98, 42%, 54%, 1);
+    font-style: normal;
+    font-size: 2rem;
+    padding: 0 3rem;
+    height: 4rem;
+}
+
+.button--helene::before {
+    content: '';
+    top: 24px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: rgba(0,0,0,0.5);
+    filter: blur(7px);
+    border-radius: 56px;
+    z-index: -1;
+    transform: translate3d(0,15px,0);
+    transition: transform 0.45s;
+}
+
+.button--helene:hover::before {
+    transform: translate3d(0,0,0);
+}
+
+.button--helene span {
+    display: block;
+}
+
+.button--helene > span {
+    height: 100%;
+    overflow: hidden;
+    line-height: 4rem;
+}
+
+.button--helene:hover > span > span {
+    animation: slotMachine 0.15s ease-out forwards 3;
+}
+
+@keyframes slotMachine {
+    50% {
+        transform: translate3d(0,100%,0);
+        opacity: 0;
+    }
+    51% {
+        transform: translate3d(0,-100%,0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
 /*==============================>> MARQUEEs */
 .marquee {
    overflow: hidden;
-   background-color:hsla(0, 0%, 100%, 0.03);
-   box-shadow: inset 0px 0px 1.73844px rgba(255, 255, 255, 0.05), inset 0px 0.102261px 0.102261px rgba(255, 255, 255, 0.15);
-   backdrop-filter: blur(2.19862px);
+   background-color:hsla(0, 4%, 76%, 0.5);
+   box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.5), inset 0px 0.2px 0.2px rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(16px);
+   font-family: 'Space Grotesk', sans-serif;
+   font-weight: 700;
+   text-decoration: none;
+   color: #ffffff;
+   padding: 1rem;
 }
 
 .marquee--long {
+   position: absolute;
+   top: 30%;
    margin: 2rem 0;
    font-size: 6.25vw;
-   background-color:hsla(0, 0%, 100%, 0.03);
+   background-color:hsla(0, 4%, 76%, 0.6);
 }
 .marquee--social { 
-   margin: 0;
+   margin-bottom: 0.5vh;
+   padding: 0.5rem;
    font-size: 2.25vw;
    background-color:hsla(0, 0%, 100%, 0.03);
 }
+.-twt {
+  background: hsla(203, 89%, 53%, 0.5);
+}
+.-ins {
+  background: hsla(326, 57%, 48%, 0.5);
+
+}
 .-fb { 
-   background-color:hsla(0, 0%, 100%, 0.03);
+   background-color: hsla(220, 46%, 48%, 0.5);
 }
 .marquee span{   
     display: inline-block;
@@ -159,7 +243,10 @@ a.button:hover {
 /*==============================>>  */
 /*==============================>> ANIMATIONS */
 
-
+iframe {
+    position: absolute;
+    z-index: -1;
+}
 
 
 /*==============================>> MEDIA_QUERIES */
