@@ -182,7 +182,6 @@ a {
    font-weight: 700;
    text-decoration: none;
    color: #ffffff;
-   padding: 0.5rem;
 }
 
 .marquee--long {
@@ -194,13 +193,15 @@ a {
    z-index:  -2;
 }
 .arriba {
+    overflow-x: hidden;
     position: absolute;
     top: 70%;
     font-size: 3.25vw;
     background-color:hsla(0, 4%, 76%, 0.6);
     z-index:  1;
 }
-.marquee--social { 
+.marquee--social {
+overflow-x: hidden;
    margin-bottom: 0.5vh;
    padding: 0.5rem;
    font-size: 2.25vw;
