@@ -174,7 +174,7 @@ a {
 
 /*==============================>> MARQUEEs */
 .marquee {
-   overflow: hidden;
+   overflow-x: hidden;
    background-color:hsla(0, 4%, 76%, 0.5);
    box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.5), inset 0px 0.2px 0.2px rgba(255, 255, 255, 0.2);
    backdrop-filter: blur(16px);
