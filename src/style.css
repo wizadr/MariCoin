@@ -31,15 +31,12 @@ a {
 .navbar {
     display: flex;
     position: sticky;
-    justify-content: space-between;
     align-items: center;
-    background-color:hsla(0, 4%, 76%, 0.5);
-    box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.5), inset 0px 0.2px 0.2px rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(16px);
-    padding:  0.3em;
+    padding:  0.5em;
 }
 .navbar-links {
     height: 100%;
+
 }
 
 .navbar-links ul {
@@ -49,16 +46,23 @@ a {
 }
 
 .navbar-links li {
+    display: flex;
+    justify-content: space-between;
     list-style: none;
+    background-color:hsla(0, 4%, 76%, 0.5);
+    box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.5), inset 0px 0.2px 0.2px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(16px);
+    border-radius: 104px;
 }
 
 .navbar-links li a {
     display: block;
     font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
+    font-weight: 300;
     text-decoration: none;
-    color: #ffffff;
-    padding: 1rem;
+    color: hsla(0, 0%, 0%, 1)
+;
+    padding: 0.5rem;
 }
 
 .navbar-links li:hover {
@@ -87,7 +91,7 @@ a {
 .button {
     pointer-events: auto;
     cursor: pointer;
-    background-color:#e7e7e7;
+    background-color:hsla(98, 42%, 54%, 1);
     border-radius: 104px;
     padding: 1.5rem 3rem;
     margin: 0;
@@ -108,8 +112,8 @@ a {
 }
 .button--helene {
     position: absolute;
-    bottom:20%;
-    left:30%;
+    bottom:60%;
+    left:42%;
 }
 
 .button--helene {
@@ -186,14 +190,21 @@ a {
    top: 20%;
    margin: 2rem 0;
    font-size: 6.25vw;
-   background-color:hsla(0, 4%, 76%, 0.6);
+   background-color:hsla(98, 42%, 54%, 1);
    z-index:  -2;
+}
+.arriba {
+    position: absolute;
+    top: 70%;
+    font-size: 3.25vw;
+    background-color:hsla(0, 4%, 76%, 0.6);
+    z-index:  1;
 }
 .marquee--social { 
    margin-bottom: 0.5vh;
    padding: 0.5rem;
    font-size: 2.25vw;
-   background-color:hsla(0, 0%, 100%, 0.5);
+   background-color:hsla(0, 0%, 100%, 0.01);
 }
 
 .marquee span{   
